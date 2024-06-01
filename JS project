@@ -1,0 +1,33 @@
+let nftCollection = [];
+function MINTNFT(name, collage, branch, age, cgpa) {
+    let nft = {
+        name: name,
+        collage:collage,
+        branch: branch,
+        age:age,
+        cgpa:cgpa 
+    };
+    nftCollection.push(nft);
+}
+function LISTNFTs() {
+     console.log("Welcome to chiranjeev's NFT Collection ");
+    for (let i = 0; i < nftCollection.length; i++) {
+        console.log("\n_____ENTRY NFT CARD ________\n");
+        console.log("Name: " + nftCollection[i].name);
+        console.log("collage: " + nftCollection[i].collage);
+        console.log("branch: " + nftCollection[i].branch);
+        console.log("age: " + nftCollection[i].age);
+        console.log("cgpa: " + nftCollection[i].cgpa);
+        console.log("____///////////// _______");
+    }
+}
+function getTotalNFTCount() {
+    console.log("Total NFTs Minted so Far: " + nftCollection.length);
+
+}
+MINTNFT("AMAN", "CU","ECE" , 23, 8);
+MINTNFT("VIVEK", "LPU","CSE" , 22, 7.5);
+MINTNFT("IRFAN", "GU", "IT", 23, 7);
+MINTNFT("MOHIT", "PU", "ME", 24, 8.5);
+LISTNFTs();
+getTotalNFTCount();
